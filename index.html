@@ -1,0 +1,104 @@
+<!DOCTYPE html><html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Indian Computer Institute Mohammadi</title><style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial;background:#f1f5fb;color:#222}
+header{background:#092c5c;color:white;text-align:center;padding:25px 10px}
+header h1{font-size:26px}
+nav{background:#0879d9;padding:15px;text-align:center}
+nav a{color:white;text-decoration:none;margin:8px;font-weight:bold}
+.hero{background:linear-gradient(120deg,#092c5c,#0879d9);color:white;text-align:center;padding:65px 15px}
+.hero h2{font-size:30px}
+section{padding:30px 15px;text-align:center}
+h2{color:#092c5c}
+.cards{display:flex;flex-wrap:wrap;justify-content:center;gap:15px}
+.card{background:white;padding:22px;width:270px;border-radius:12px;box-shadow:0 2px 10px #ccc}
+.card h3{color:#0879d9}
+form{max-width:450px;margin:auto;background:white;padding:20px;border-radius:12px}
+input,select,textarea{width:100%;padding:13px;margin:8px 0;border:1px solid #ccc;border-radius:6px}
+button{background:#0879d9;color:white;padding:13px;border:0;border-radius:6px;width:100%;font-size:16px}
+footer{background:#092c5c;color:white;text-align:center;padding:25px}
+.whatsapp{position:fixed;bottom:15px;right:15px;background:#20bd62;color:white;padding:14px;border-radius:30px;text-decoration:none}
+</style></head><body><header>
+<h1>INDIAN COMPUTER INSTITUTE</h1>
+<p>📍 Near Ashok Chouraha, Mohammadi</p>
+<p>Learn Today • Earn Tomorrow</p>
+</header><nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#courses">Courses</a>
+<a href="#admission">Admission</a>
+<a href="#contact">Contact</a>
+</nav><div class="hero" id="home">
+<h2>Welcome To Our Institute</h2>
+<p>अपने भविष्य को डिजिटल शिक्षा के साथ उज्ज्वल बनाएं।</p>
+<a href="#admission" style="background:#ffbd35;color:black;padding:13px;text-decoration:none;border-radius:5px">Apply Now</a>
+</div><section id="about">
+<h2>About Our Institute</h2>
+<div class="card" style="margin:auto">
+<p>Indian Computer Institute Mohammadi में आपका स्वागत है।</p>
+<p>हमारा उद्देश्य विद्यार्थियों को बेहतर कंप्यूटर शिक्षा देना है।</p>
+</div>
+</section><section id="courses">
+<h2>Our Courses</h2>
+<div class="cards">
+<div class="card"><h3>CCC</h3><p>Computer Concepts</p></div>
+<div class="card"><h3>DCA</h3><p>Diploma in Computer Application</p></div>
+<div class="card"><h3>ADCA</h3><p>Advanced Computer Application</p></div>
+<div class="card"><h3>Tally Prime</h3><p>Accounting & GST</p></div>
+<div class="card"><h3>Typing</h3><p>Hindi & English</p></div>
+<div class="card"><h3>Web Designing</h3><p>HTML, CSS, JavaScript</p></div>
+</div>
+</section><section id="admission">
+<h2>Online Admission</h2>
+<form onsubmit="sendAdmission(event)">
+<input id="studentName" placeholder="Student Name" required>
+<input id="fatherName" placeholder="Father Name" required>
+<input id="studentMobile" type="tel" pattern="[0-9]{10}" placeholder="Mobile Number" required><select id="studentCourse" required>
+<option value="">Select Course</option>
+<option>CCC</option>
+<option>DCA</option>
+<option>ADCA</option>
+<option>Tally Prime</option>
+<option>Typing</option>
+<option>Web Designing</option>
+</select><textarea id="studentAddress" placeholder="Your Address" required></textarea><button type="submit">Submit Admission</button>
+
+</form>
+</section><section id="contact">
+<h2>Contact Us</h2>
+<div class="card" style="margin:auto">
+<h3>INDIAN COMPUTER INSTITUTE</h3>
+<p>📍 Near Ashok Chouraha, Mohammadi</p>
+<p>📞 9140198952</p>
+<p>📞 9794584390</p>
+<p><a href="tel:9140198952">Call 9140198952</a></p>
+<p><a href="tel:9794584390">Call 9794584390</a></p>
+<a href="https://wa.me/919140198952">WhatsApp पर संपर्क करें</a>
+<br><br>
+<a href="https://wa.me/919794584390">WhatsApp दूसरा नंबर</a>
+</div>
+</section><footer>
+<h3>INDIAN COMPUTER INSTITUTE</h3>
+<p>Near Ashok Chouraha, Mohammadi</p>
+<p>Contact: 9140198952 / 9794584390</p>
+<p>© 2026 All Rights Reserved</p>
+</footer><a class="whatsapp" href="https://wa.me/919140198952">WhatsApp</a>
+
+<script>
+function sendAdmission(e){
+e.preventDefault();
+
+let msg="New Admission Request\n"+
+"Name: "+document.getElementById("studentName").value+"\n"+
+"Father: "+document.getElementById("fatherName").value+"\n"+
+"Mobile: "+document.getElementById("studentMobile").value+"\n"+
+"Course: "+document.getElementById("studentCourse").value+"\n"+
+"Address: "+document.getElementById("studentAddress").value;
+
+window.open("https://wa.me/919140198952?text="+encodeURIComponent(msg),"_blank");
+}
+</script></body>
+</html>
